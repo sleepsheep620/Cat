@@ -13,10 +13,11 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: macos-14        # Apple 芯片（M1/M2/M3/M4）
-            arch: apple-silicon
-          - os: macos-13        # Intel 芯片
-            arch: intel
+         - os: macos-15        # Apple 芯片（M1/M2/M3/M4）
+           arch: apple-silicon
+         - os: macos-15-intel  # Intel 芯片（老款 Mac）
+           arch: intel
+
 
     steps:
       - name: 取代码
